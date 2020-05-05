@@ -1,0 +1,9 @@
+#create _owner_role and _user_role roles
+
+create role fs_owner_role;
+create role fs_user_role;
+
+grant create session, alter session, create database link, create materialized view, create procedure, CREATE JOB to fs_owner_role;
+grant create public synonym, create sequence, create synonym, create table, create trigger, create type, create view to fs_owner_role;
+
+grant create session, alter session to fs_user_role;
